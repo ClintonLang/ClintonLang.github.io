@@ -11,3 +11,7 @@ In this repo, I use github issues for many different purposes.  I consider this 
 * A slack configuration/use case
 * a Cloud9 integration
 etc.
+
+### Check out my kanban board!
+I use waffle.io to manage my issues.  Check it out!
+[![Stories in Ready](https://badge.waffle.io/ClintonLang/ClintonLang.github.io.svg?label=ready&title=Ready)](http://waffle.io/ClintonLang/ClintonLang.github.io)
