@@ -1,0 +1,5 @@
+/* TEAM */
+	Web Developer:  Clinton Lang
+	From:   Vancouver, British Columbia, Canada
+
+/* THANKS */
