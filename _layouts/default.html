@@ -5,10 +5,13 @@
     </head>
     <body>
         {% include header.html %}
+        <main>
         {% include section_home.html %}
         {% include section_demo.html %}
+        {% include section_resume.html %}
         {% include section_contact.html %}
             {{ content }}
+        </main>
         {% include footer.html %}
         {% include analytics.html %}
     </body>
