@@ -11,6 +11,7 @@
         'videoreel videoreel videoreel audioreel audioreel audioreel'
         'resumedl resumedl resume resume resume resume'
         'contact contact contactform contactform contactform contactform'
+        'footer footer footer footer footer footer'
     ;
   }
 
@@ -24,17 +25,18 @@
   .resume{grid-area:resume;}
   .contact{grid-area:contact;}
   .contactform{grid-area:contactform;}
-  
+  .footer{grid-area:footer;}
+
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     
     .grid-container1 {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
+      grid-template-rows:  1fr;
    }
 
   .title,.mainnav,.headshot,.aboutme,.videoreel,.audioreel,
-	.resumedl,.resume,.contact,.contactform
+	.resumedl,.resume,.contact,.contactform,footer
   {
     grid-column: 1;
     grid-row: auto;
@@ -43,7 +45,10 @@
   }
   
 /* || Header and Main Navigation */
-  #mainheader{
+  .title{
+    background-color: #000000;  
+  }
+  .mainnav{
     background-color: #000000;  
   }
 
