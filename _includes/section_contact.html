@@ -5,16 +5,16 @@
 <div class="contactform">
     <h1>Contact Me</h1>
     <div class="container">
-        <form name="contact-form" action="https://app.99inbound.com/api/e/WSMnPJqd" method="POST" autocomplete="on" target="_blank">
+        <form name="contact-form" id="contact-form" action="https://app.99inbound.com/api/e/WSMnPJqd" method="POST" autocomplete="on" target="_blank">
             <label for="contact_name">Your Name</label>
-            <input id="contact_name" type="text" name="name" placeholder="Name">
+            <input id="contact_name" type="text" name="name" placeholder="Name" required>
 
             <label for="contact_email">Your Email</label>
-            <input id="contact_email" type="email" name="email" placeholder="Email">
+            <input id="contact_email" type="email" name="email" placeholder="Email" required>
 
             <label for="contact_msg">Your Message</label>
-            <textarea id="contact_msg" placeholder="What's up?"></textarea>
-            
+            <textarea id="contact_msg" placeholder="What's up?" required></textarea>
+            <div class="form_success">We received your submission, thank you!</div>
             <input type="submit">
         </form>
         <div style="position: absolute; left: -5000px;">

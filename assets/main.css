@@ -1,15 +1,18 @@
 /* CSS Grid */
   * {
-    box-sizing: border-box;
+   box-sizing: border-box;
   }
-
+  body {
+    margin:0;
+    }
   #grid-container{
     display: grid;
     grid-template-areas:
     	'title title mainnav mainnav mainnav mainnav'
         'headshot headshot headshot aboutme aboutme aboutme'
         'videoreel videoreel videoreel audioreel audioreel audioreel'
-        'resumedl resumedl resume resume resume resume'
+        'resume resume resume resume resume resume'
+        'resumedl resumedl resumedl resumedl resumedl resumedl'
         'contact contact contactform contactform contactform contactform'
         'footer footer footer footer footer footer'
     ;
@@ -27,10 +30,17 @@
   .contactform{grid-area:contactform;}
   .footer{grid-area:footer;}
 
+
+  #grid-container div,footer{
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+  }
+
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     
-    .grid-container1 {
+    #grid-container {
       grid-template-columns: 1fr;
       grid-template-rows:  1fr;
    }
@@ -43,15 +53,14 @@
   }
     
   }
+
+  /* Grid Items */
+#grid-container h1{
+  text-align: center;
+}
+
   
 /* || Header and Main Navigation */
-  .title{
-    background-color: #000000;  
-  }
-  .mainnav{
-    background-color: #000000;  
-  }
-
   .title_span {
     font-size: 2rem;
     display: block;
@@ -72,17 +81,37 @@
     
   .main_nav li a {
     display: block;
-    color: white;
     text-align: center;
     padding: 10px;
+    color: white;
     text-decoration: none;
   }
     
   .main_nav li a:hover {
     text-decoration: underline;
   } 
+/* About Me*/
+  #about-me p{
+    padding: 30px;
+  }
+/* Demoes */
 
-
+/* Resume */
+  #resume-container{
+    display: grid;
+    grid-template-areas: 
+      'resume-sidebar resume-sidebar resume-main resume-main resume-main resume-main'
+  }
+  #resume-sidebar{ grid-area: resume-sidebar;}
+  #resume-main{ grid-area: resume-main;}
+/* Contact Info*/
+  .contact p a {
+    color:white;
+    text-decoration: none;
+  }
+  .contact p a:hover {
+    text-decoration: underline;
+  }
 /* Contact Form */
   input[type=text], input[type=email], select, textarea {
     width: 100%;
@@ -116,4 +145,12 @@
     background-color: black;
     width:75%;
     padding: 20px;
+    margin: auto;
+  }
+
+  .form_success {
+    display: none;
+  }
+  .form_success.is-active{
+    display: block;
   }
