@@ -1,0 +1,156 @@
+/* CSS Grid */
+  * {
+   box-sizing: border-box;
+  }
+  body {
+    margin:0;
+    }
+  #grid-container{
+    display: grid;
+    grid-template-areas:
+    	'title title mainnav mainnav mainnav mainnav'
+        'headshot headshot headshot aboutme aboutme aboutme'
+        'videoreel videoreel videoreel audioreel audioreel audioreel'
+        'resume resume resume resume resume resume'
+        'resumedl resumedl resumedl resumedl resumedl resumedl'
+        'contact contact contactform contactform contactform contactform'
+        'footer footer footer footer footer footer'
+    ;
+  }
+
+  .title{grid-area:title;}
+  .mainnav{grid-area:mainnav;}
+  .headshot{grid-area:headshot;}
+  .aboutme{grid-area:aboutme;}
+  .videoreel{grid-area:videoreel;}
+  .audioreel{grid-area:audioreel;}
+  .resumedl{grid-area:resumedl;}
+  .resume{grid-area:resume;}
+  .contact{grid-area:contact;}
+  .contactform{grid-area:contactform;}
+  .footer{grid-area:footer;}
+
+
+  #grid-container div,footer{
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    
+    #grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows:  1fr;
+   }
+
+  .title,.mainnav,.headshot,.aboutme,.videoreel,.audioreel,
+	.resumedl,.resume,.contact,.contactform,footer
+  {
+    grid-column: 1;
+    grid-row: auto;
+  }
+    
+  }
+
+  /* Grid Items */
+#grid-container h1{
+  text-align: center;
+}
+
+  
+/* || Header and Main Navigation */
+  .title_span {
+    font-size: 2rem;
+    display: block;
+    color: white;
+    text-align: center;
+  }
+
+  .main_nav ul{
+    list-style-type: none;
+    margin: auto;
+    overflow: hidden;
+    vertical-align: bottom;
+  }
+    
+  .main_nav li {
+    float: left;
+  }
+    
+  .main_nav li a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+  }
+    
+  .main_nav li a:hover {
+    text-decoration: underline;
+  } 
+/* About Me*/
+  #about-me p{
+    padding: 30px;
+  }
+/* Demoes */
+
+/* Resume */
+  #resume-container{
+    display: grid;
+    grid-template-areas: 
+      'resume-sidebar resume-sidebar resume-main resume-main resume-main resume-main'
+  }
+  #resume-sidebar{ grid-area: resume-sidebar;}
+  #resume-main{ grid-area: resume-main;}
+/* Contact Info*/
+  .contact p a {
+    color:white;
+    text-decoration: none;
+  }
+  .contact p a:hover {
+    text-decoration: underline;
+  }
+/* Contact Form */
+  input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+  }
+
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: black;
+    width:75%;
+    padding: 20px;
+    margin: auto;
+  }
+
+  .form_success {
+    display: none;
+  }
+  .form_success.is-active{
+    display: block;
+  }

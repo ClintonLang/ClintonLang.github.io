@@ -1,12 +1,18 @@
 <!doctype html>
 <html lang="en-CA">
+    <head>
+      {% include head.html %}
+    </head>
     <body>
-        <nav>
-          <a href="/">Home</a>
-        </nav>
-          <section>
-            {{ content }}
-          </section>
+        <div id="grid-container">
+            {% include header.html %}
+            {% include section_home.html %}
+            {% include section_demo.html %}
+            {% include section_resume.html %}
+            {% include section_contact.html %}
+            {% include footer.html %}   
+        </div>
         {% include analytics.html %}
     </body>
+
 </html>
