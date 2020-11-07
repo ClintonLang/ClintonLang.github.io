@@ -59,7 +59,11 @@
   text-align: center;
 }
 
-  
+/* Images */
+  img {
+    max-width:100%;
+    height: auto;
+  }
 /* || Header and Main Navigation */
   .title_span {
     font-size: 2rem;
