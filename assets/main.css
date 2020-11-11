@@ -12,10 +12,8 @@
         'headshot headshot headshot aboutme aboutme aboutme'
         'videoreel videoreel videoreel audioreel audioreel audioreel'
         'resume resume resume resume resume resume'
-        'resumedl resumedl resumedl resumedl resumedl resumedl'
-        'contact contact contactform contactform contactform contactform'
-        'footer footer footer footer footer footer'
-    ;
+        'contactform contactform contactform contactform contactform contactform'
+        'footer footer footer footer footer footer';
   }
 
   .title{grid-area:title;}
@@ -24,9 +22,7 @@
   .aboutme{grid-area:aboutme;}
   .videoreel{grid-area:videoreel;}
   .audioreel{grid-area:audioreel;}
-  .resumedl{grid-area:resumedl;}
   .resume{grid-area:resume;}
-  .contact{grid-area:contact;}
   .contactform{grid-area:contactform;}
   .footer{grid-area:footer;}
 
@@ -43,14 +39,13 @@
     #grid-container {
       grid-template-columns: 1fr;
       grid-template-rows:  1fr;
-   }
+    }
 
-  .title,.mainnav,.headshot,.aboutme,.videoreel,.audioreel,
-	.resumedl,.resume,.contact,.contactform,footer
-  {
-    grid-column: 1;
-    grid-row: auto;
-  }
+    .title,.mainnav,.headshot,.aboutme,.videoreel,.audioreel,
+	  .resume,.contactform,.footer{
+      grid-column: 1;
+      grid-row: auto;
+    }
     
   }
 
@@ -93,6 +88,7 @@
     
   .main_nav li a:hover {
     text-decoration: underline;
+    color:yellow;
   } 
 /* About Me*/
   #about-me p{
