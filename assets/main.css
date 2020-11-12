@@ -8,16 +8,16 @@
   #grid-container{
     display: grid;
     grid-template-areas:
-    	'title title mainnav mainnav mainnav mainnav'
-        'headshot headshot headshot aboutme aboutme aboutme'
-        'videoreel videoreel videoreel audioreel audioreel audioreel'
-        'resume resume resume resume resume resume'
-        'contactform contactform contactform contactform contactform contactform'
-        'footer footer footer footer footer footer';
+    	'title mainnav'
+        'headshot aboutme'
+        'videoreel audioreel'
+        'resume resume'
+        'contactform contactform'
+        'footer footer';
   }
 
-  .title{grid-area:title;}
-  .mainnav{grid-area:mainnav;}
+  .title{grid-area:title;position:sticky;top:0;}
+  .mainnav{grid-area:mainnav;position:sticky;top:0;}
   .headshot{grid-area:headshot;}
   .aboutme{grid-area:aboutme;}
   .videoreel{grid-area:videoreel;}
@@ -36,10 +36,6 @@
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     
-    #grid-container {
-      grid-template-columns: 1fr;
-      grid-template-rows:  1fr;
-    }
 
     .title,.mainnav,.headshot,.aboutme,.videoreel,.audioreel,
 	  .resume,.contactform,.footer{
@@ -56,13 +52,12 @@
 
 /* Images */
   img {
-    max-width:100%;
+    width:100%;
     height: auto;
   }
 /* || Header and Main Navigation */
   .title_span {
     font-size: 2rem;
-    display: block;
     color: white;
     text-align: center;
   }
