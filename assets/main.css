@@ -41,6 +41,7 @@
 	  .resume,.contactform,.footer{
       grid-column: 1;
       grid-row: auto;
+      padding: 0px;
     }
     
   }
